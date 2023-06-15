@@ -15,7 +15,7 @@ stages{
         stage('Build Docker Image'){
              steps{
                   script{
-                      sh 'docker build -t ravitejamusinuridocker/jenkinsautomation3 .'
+                      sh 'docker build -t ravitejamusinuridocker/jenkinsautomation4 .'
                   }
              }
         }
@@ -27,7 +27,7 @@ stages{
                         sh 'docker login -u ravitejamusinuridocker -p ${dockerpwd}'
                     }
                     
-                    sh 'docker push ravitejamusinuridocker/jenkinsautomation3'            
+                    sh 'docker push ravitejamusinuridocker/jenkinsautomation4'            
                 }
             }
         }
