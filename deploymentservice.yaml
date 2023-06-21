@@ -27,6 +27,14 @@ kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
   name: springboot-k8ssvc
 spec:
+  template:
+    spec:
+      containers:
+        env:
+        - name: HTTP_PROXY
+          value: null
+        - name: HTTPS_PROXY
+          value: null
   selector:
     app: spring-boot-k8s
   ports:
